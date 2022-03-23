@@ -1,0 +1,9 @@
+* {
+    font-family: sans-serif, Verdana, Geneva;
+}
+
+body {
+    max-width: 1000px;
+    padding: auto;
+    margin: auto;
+}
