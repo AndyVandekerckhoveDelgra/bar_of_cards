@@ -64,8 +64,6 @@
 </head>
 
 <body>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0&appId=349730487001799&autoLogAppEvents=1" nonce="97Gq4Rzh"></script>
     <!-- <header>
     <h1>My website</h1>
 </header>
@@ -110,6 +108,10 @@
             <img src="Bar%20Of%20Cards1.png" alt="Bar of Cards" width="300" height="300" class="center responsive computeronly">
             <img src="Bar%20Of%20Cards%20Symbols.png" alt="Bar of Cards Symbols" width="886" height="302" class="center responsive phoneonly">
             <h2>Login:</h2>
+
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0&appId=349730487001799&autoLogAppEvents=1" nonce="97Gq4Rzh"></script>
+            <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
             <div id="loginBtn" onclick="logout" style="display:none;">
                 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
                 </fb:login-button>
@@ -117,7 +119,6 @@
             <div id="name"></div>
             <div id="email"></div>
             <div id="logoutBtn" onclick="logout();" style="display:none;">LOGOUT</div>
-            <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
         </header>
         <article>
             <h2>Info</h2>
