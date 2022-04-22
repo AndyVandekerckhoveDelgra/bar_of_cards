@@ -41,6 +41,12 @@
         }
 
         function statusChangeCallback(response) {
+            FB.api('/me?fields=first_name, last_name,email', function(response) {
+                /*console.log('Successful login for: ' + response.name);*/
+                document.getElementById('name').innerHTML =
+                    response.first_name + ' ' + response.last_name;
+                document.getElementById('email').innerHTML = response.email;
+            });
 
         }
 
@@ -94,6 +100,14 @@
             <h2>Login:</h2>
             <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
             </fb:login-button>
+            <form class="form" id="login">
+                <h1 class="form__title">Login</h1>
+                <div class="form__message form__message--error">Incorrect username/password combination.</div>
+                <div class="form__input-group">
+                    <input type="text" class="form__input" autofocus placeholder="Username or Email">
+                    <div class="form__input-error-message">This is an error message</div>
+                </div>
+            </form>
         </header>
         <article>
             <h2>Info</h2>
