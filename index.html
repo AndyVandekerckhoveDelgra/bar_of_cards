@@ -18,8 +18,7 @@
                 xfbml: true,
                 version: '{api-version}'
             });
-
-            FB.AppEvents.logPageView();
+            /*FB.AppEvents.logPageView();*/
 
         };
 
@@ -46,8 +45,21 @@
                 document.getElementById('name').innerHTML =
                     response.first_name + ' ' + response.last_name;
                 document.getElementById('email').innerHTML = response.email;
+                document.getElementById('loginBtn').style.display = "none";
+                document.getElementById('name').style.display = "block";
+                document.getElementById('email').style.display = "block";
+                document.getElementById('logoutBtn').style.display = "block";
             });
 
+        }
+
+        function logout(response) {
+            FB.logout(function(response) { //Person is now logged out
+                document.getElementById('loginBtn').style.display = "block";
+                document.getElementById('name').style.display = "none";
+                document.getElementById('email').style.display = "none";
+                document.getElementById('logoutBtn').style.display = "none";
+            });
         }
 
     </script>
@@ -98,16 +110,23 @@
             <img src="Bar%20Of%20Cards1.png" alt="Bar of Cards" width="300" height="300" class="center responsive computeronly">
             <img src="Bar%20Of%20Cards%20Symbols.png" alt="Bar of Cards Symbols" width="886" height="302" class="center responsive phoneonly">
             <h2>Login:</h2>
-            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-            </fb:login-button>
-            <form class="form" id="login">
-                <h1 class="form__title">Login</h1>
-                <div class="form__message form__message--error">Incorrect username/password combination.</div>
-                <div class="form__input-group">
-                    <input type="text" class="form__input" autofocus placeholder="Username or Email">
-                    <div class="form__input-error-message">This is an error message</div>
-                </div>
-            </form>
+            <div id="loginBtn" onclick="logout" style="display:none;">
+                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                </fb:login-button>
+            </div>
+            <!-- <form class="form" id="login">
+     <h1 class="form__title">Login</h1>
+     <div class="form__message form__message--error">Incorrect username/password combination.</div>
+     <div class="form__input-group">
+         <input type="text" class="form__input" autofocus placeholder="Username or Email">
+         <div class="form__input-error-message">This is an error message</div>
+     </div>
+     <br>
+     <div id="logoutBtn" onclick="logout" style="display:none;">LOGOUT</div>
+ </form>-->
+            <div id="name"></div>
+            <div id="email"></div>
+            <div id="logoutBtn" onclick="logout();" style="display:none;">LOGOUT</div>
         </header>
         <article>
             <h2>Info</h2>
