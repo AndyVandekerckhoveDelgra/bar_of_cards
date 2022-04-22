@@ -42,7 +42,7 @@
         function statusChangeCallback(response) {
             FB.api('/me?fields=first_name,last_name,email', function(response) {
                 /*console.log('Successful login for: ' + response.name);*/
-                document.getElementById('name').innerHTML = response.first_name + ' ' + esponse.last_name;
+                document.getElementById('name').innerHTML = response.first_name + ' ' + response.last_name;
                 document.getElementById('email').innerHTML = response.email;
                 document.getElementById('loginBtn').style.display = "none";
                 document.getElementById('name').style.display = "block";
@@ -59,6 +59,7 @@
                 document.getElementById('email').style.display = "none";
                 document.getElementById('logoutBtn').style.display = "none";
             });
+        }
 
     </script>
 </head>
@@ -112,7 +113,7 @@
             <div id="fb-root"></div>
             <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0&appId=349730487001799&autoLogAppEvents=1" nonce="97Gq4Rzh"></script>
             <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
-            <div id="loginBtn" onclick="logout" style="display:none;">
+            <div id="loginBtn">
                 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
                 </fb:login-button>
             </div>
