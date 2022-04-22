@@ -52,6 +52,7 @@
         <h2 class="center">Homepage</h2>
         <header>
             <img src="Bar%20Of%20Cards1.png" alt="Bar of Cards" width="300" height="300" class="center responsive computeronly">
+            <img src="Bar%20Of%20Cards%20Symbols.png" alt="Bar of Cards Symbols" width="886" height="302" class="center responsive phoneonly">
         </header>
         <article>
             <h2>Info</h2>
@@ -71,12 +72,12 @@
                 <span>Each card has 1 type, 2 different stats, and 2 different attacks. The symbol on the top far right indicates the type of the brawler. The stat with a value next to "HP:" is the HP stat; the stat with a value next to "Speed:" is the speed stat. The other two values are for the attacks, which are accompanied by a symbol, which too should indicate the type, but for the attack instead of the card. The values for both attacks are also counted as stats and can be increased by the bonus from the Gift Phase.</span>
             </p>
             <p>
-                <img src="Card%20example.png" alt="">
+                <img src="Card%20example.png" alt="Card Explanation" class="responsive">
             </p>
             <p><span>
                     The symbols for the attacks and types, and the values for the stats vary from cards. The same kind of symbols for attacks are also used for the type. This is because this card game works with a weakness system explained in "Weakness explained".</span>
             </p>
-            <p><span><img src="Symbols%20with%20descrip.png" alt="Symbols" height="155" width="355"></span></p>
+            <p><span><img src="Symbols%20with%20descrip.png" class="responsive" alt="Symbols" height="155" width="355"></span></p>
             <h4>How to play?</h4>
             <p>
                 <span>The game starts with the first round. Each round is split in different phases that happen chronogically as listed: Send Phase, Gift Phase, Decision Phase, Attack Phase, and Last Phase. The only phases where you can interact with the game are the Send Phase, and the Decision Phase.
@@ -100,7 +101,7 @@
             <p>
                 <span>Each attack has a type assigned to it. Depending on the type brawler the attack is used on, the attack's value may increase (it does more "damage" to the opposing brawler), or decrease (do less "damage"). The amount that's used to increase or decrease the values with is always 2. For example if a paper type attack is used against a rock type brawler, the value gets increased by 2; but if it's used against a scissor type brawler, its value gets decreased by 2. These increases/decreases happen right after the attack is declared, but before the opposing brawler gets attacked. However these increases or decreases disappear during the Last Phase: The values of the adjusted attack's value gets increased/decreased by 2 to turn it back to its original value. There are only 3 types in this game. The following scheme shows how the types interact.</span>
             </p>
-            <p><span><img src="Scheme.png" alt="Type Chart"></span></p>
+            <p><span><img src="Scheme.png" alt="Type Chart" class="responsive"></span></p>
             <h4>How to win?</h4>
             <p>
                 <span>By defeating all of your opponent's brawlers.</span>
@@ -112,6 +113,31 @@
 
         </article>
     </section>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '{your-app-id}',
+                cookie: true,
+                xfbml: true,
+                version: '{api-version}'
+            });
+
+            FB.AppEvents.logPageView();
+
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    </script>
     <!--<div class="container"></div>
 <form class="form" id="login">
     <h1 class="form__title">Login</h1>
