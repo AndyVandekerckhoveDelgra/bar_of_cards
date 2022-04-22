@@ -10,6 +10,41 @@
     <meta name="description" content="The Bar of Cards offers a replayable experience with Solitaire & their very own, Rare Brawl. Gather as many points as you can & collect all the 50 cards!">
     <!--<link rel="icon" type="image/x-icon" href="favicon.ico">-->
     <link rel="stylesheet" href="./css/homepage.css">
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '{your-app-id}',
+                cookie: true,
+                xfbml: true,
+                version: '{api-version}'
+            });
+
+            FB.AppEvents.logPageView();
+
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        function checkLoginState() {
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+        }
+
+        function statusChangeCallback(response) {
+
+        }
+
+    </script>
 </head>
 
 <body>
@@ -34,6 +69,9 @@
 <footer>
     <h2>Contact info</h2>
 </footer>-->
+    <!-- FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+    });-->
     <section>
         <h2>
             <a href="project.html"><img src="Bar%20Of%20Cards%20bar2.png" alt="Bar Of Cards" width="500" height="100" class="phonexlscreenonly center responsive"></a>
@@ -53,6 +91,9 @@
         <header>
             <img src="Bar%20Of%20Cards1.png" alt="Bar of Cards" width="300" height="300" class="center responsive computeronly">
             <img src="Bar%20Of%20Cards%20Symbols.png" alt="Bar of Cards Symbols" width="886" height="302" class="center responsive phoneonly">
+            <h2>Login:</h2>
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+            </fb:login-button>
         </header>
         <article>
             <h2>Info</h2>
@@ -113,33 +154,9 @@
 
         </article>
     </section>
-    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-    </fb:login-button>
-    <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId: '{your-app-id}',
-                cookie: true,
-                xfbml: true,
-                version: '{api-version}'
-            });
+    <!--   <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+   </fb:login-button>-->
 
-            FB.AppEvents.logPageView();
-
-        };
-
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {
-                return;
-            }
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-
-    </script>
     <!--<div class="container"></div>
 <form class="form" id="login">
     <h1 class="form__title">Login</h1>
