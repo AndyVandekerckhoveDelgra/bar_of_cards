@@ -3,11 +3,56 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Login page</title>
+    <link rel="stylesheet" href="./css/homepage.css">
+    <link rel="stylesheet" href="./js/facebook.js">
 </head>
 
 <body>
+    <section>
+        <h2>
+            <a href="project.html"><img src="Bar%20Of%20Cards%20bar2.png" alt="Bar Of Cards" width="500" height="100" class="center responsive"></a>
+        </h2>
+    </section>
+    <nav class="stickymediumscreen">
+        <ul>
+            <li class="mediumscreenonly"><a href="index.html"><img src="Bar%20Of%20Cards%20Symbol.png" alt="Bar Of Cards" height="40"></a></li>
+            <li><a class="verticalcenter" href="solitaire.html">Solitaire</a></li>
+            <li><a class="verticalcenter" href="courier.html">Rare Brawl</a></li>
+            <li class="mediumscreenonly"></li>
+            <li><a class="verticalcenter" href="login.html">LOGIN</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2 class="center">Login Page</h2>
+        <header>
 
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0&appId=349730487001799&autoLogAppEvents=1" nonce="97Gq4Rzh"></script>
+            <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
+            <div id="loginBtn">
+                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                </fb:login-button>
+            </div>
+            <div id="name"></div>
+            <div id="email"></div>
+            <div id="logoutBtn" onclick="logout();" style="display:none;">LOGOUT</div>
+        </header>
+        <article>
+            <h2>Info</h2>
+            <h3>What is this site?</h3>
+            <p>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quos quae quibusdam, cum ut animi sint beatae, dolore voluptates ea dolorum possimus alias sunt debitis saepe consequatur! Rerum, quidem voluptatem.</span>
+                <span>Suscipit optio ea cupiditate animi iste rerum, at sequi ad magni voluptas accusamus, reiciendis vel assumenda. Similique labore pariatur magni rerum quis cumque a. Excepturi numquam beatae a neque doloribus!</span>
+                <span>Est labore cupiditate fuga nobis at commodi nostrum nulla, magni distinctio rerum. Ad totam necessitatibus, eligendi quod fugiat tempora veritatis aperiam delectus id quam, vitae vel error minima optio provident.</span>
+                <span>Omnis, quia, fuga. Aperiam nemo ullam officia doloribus, voluptatibus dolores fugiat nam maiores molestias incidunt quos temporibus assumenda fuga distinctio animi blanditiis dicta voluptate, saepe porro, minus. Aliquid atque, provident.</span>
+                <span>Iusto itaque distinctio doloribus earum, incidunt. Nam necessitatibus voluptas vel ut error, cum odio, voluptates magnam accusantium eos alias quidem a consectetur, nemo ex porro harum deleniti. Ratione, vitae, explicabo?</span>
+                <span>Corrupti quos magnam eius exercitationem quaerat perferendis ad distinctio suscipit assumenda tempora aliquid nesciunt, eligendi, ex ipsam ab minus, libero deserunt recusandae atque quasi et rem consequuntur voluptatibus! Dolor, delectus!</span>
+                <span>Illo atque voluptatum assumenda inventore. Consequuntur eos possimus id, mollitia sit totam culpa molestias nesciunt. Consequuntur fugiat totam aliquid, dolor, rerum quos, repellat facilis recusandae beatae ab error, ut similique.</span>
+            </p>
+
+        </article>
+    </section>
 </body>
 
 </html>
