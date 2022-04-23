@@ -3,7 +3,7 @@ var container = document.querySelector('ol');
 for (let thread of threads) {
     var html = `
             <li class="row">
-                <a href="./../thread.html?${thread.id}">
+                <a href="../thread.html?${thread.id}">
                     <h4 class="title">
                         ${thread.title}
                     </h4>
