@@ -1,3 +1,4 @@
+String: facebookname = document.getElementById('name').innerHTML = response.first_name + ' ' + response.last_name;
 var defaultThreads = [
     {
         id: 1,
@@ -21,7 +22,7 @@ var defaultThreads = [
     {
         id: 2,
         title: "Thread 2",
-        author: "Aaron",
+        author: facebookname,
         date: Date.now(),
         content: "Thread content 2",
         comments: [
