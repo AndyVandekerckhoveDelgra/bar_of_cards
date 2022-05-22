@@ -59,8 +59,6 @@ nav {
     padding: 5px 0px;
     margin-bottom: 40px;
     color: #E4D4C8;
-    /*background-color: #FDF5D0;
-    border-left: 20px solid #D5C8A1;*/
 
 }
 
@@ -150,7 +148,6 @@ nav a:hover {
         text-align: center;
         text-decoration: none;
         color: #E4D4C8;
-        /*height of the blocks*/
         flex: 0 1 400px;
 
     }
@@ -167,25 +164,3 @@ nav a:hover {
         border: 2px solid #000;
     }
 }
-
-
-/*
-nav ul {
-    overflow: hidden;
-    background-color: #333;
-}
-
-nav ul a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-nav ul a:hover {
-    background-color: #ddd;
-    color: black;
-}*/
