@@ -1,3 +1,0 @@
-make enemies check
-make projectile check
-scrolling
